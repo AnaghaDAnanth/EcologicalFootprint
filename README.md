@@ -59,4 +59,5 @@ The following are the tools and technologies that have been used to complete thi
 The FetchData folder sontains the python script that fetches data from the * [API endpoints](https://data.footprintnetwork.org/#/api) provided by Global Footprint Network. This script was used to fetch data for countries through the years 2015 to 2018.
 The Evaluation1 folder contains the Data folder, which holds the different datasets that were created and also the 4 notebooks used to create these datasets and also ML models.
 
+More details to be added as the project is continued.
 <p align="right">(<a href="#top">back to top</a>)</p>
