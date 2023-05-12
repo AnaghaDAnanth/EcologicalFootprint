@@ -1,0 +1,1 @@
+Contains a folder to render a mukti page Dash application with many tabs for data visualization
