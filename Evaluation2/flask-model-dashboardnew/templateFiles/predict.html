@@ -1,0 +1,399 @@
+
+<div class="box">
+  <div class="formbold-main-wrapper">
+      <!-- Author: FormBold Team -->
+      <!-- Learn More: https://formbold.com -->
+      <div class="formbold-form-wrapper">
+        <form action="/predictEcoFootprintML" method="POST">
+          <div class="formbold-mb-5">
+            <label for="country" class="formbold-form-label formbold-form-label-2"> Country Code </label>
+            <input
+              type="text"
+              name="country"
+              id="country"
+              placeholder="Country Code"
+              class="formbold-form-input"
+            />
+          </div>
+        <div class="formbold-mb-5">
+          <label for="country" class="formbold-form-label formbold-form-label-2"> Land Type </label>
+          <ul>
+            <li>
+              <input id="builtup" type="radio" name="radio" value="builtup" checked>
+              <label for="builtup">Built Up Land</label>
+            </li>
+            <li>
+              <input id="carbon" type="radio" name="radio" value="carbon">
+              <label for="carbon">Carbon</label>
+            </li>
+            <li>
+              <input id="cropland" type="radio" name="radio" value="cropland">
+              <label for="cropland">Crop Land</label>
+            </li>
+            <li>
+              <input id="fishingground" type="radio" name="radio" value="fishingground">
+              <label for="fishingground">Fishing Ground</label>
+            </li>
+            <li>
+              <input id="forestland" type="radio" name="radio" value="forestland">
+              <label for="forestland">Forest Land</label>
+            </li>
+            <li>
+              <input id="grazingland" type="radio" name="radio" value="grazingland">
+              <label for="grazingland">Grazing Land</label>
+            </li>
+
+          <div class="formbold-mb-5 formbold-pt-3">
+            <label class="formbold-form-label formbold-form-label-2">
+              Sustainability Details
+            </label>
+            <div class="flex flex-wrap formbold--mx-3">
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="bioTot"
+                    id="arbioTotea"
+                    placeholder="Total Bio Capacity in GHA"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="ecoCons"
+                    id="ecoCons"
+                    placeholder="Enter EF Consumption"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="ecoProd"
+                    id="ecoProd"
+                    placeholder="Enter EF Production"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="ecoExports"
+                    id="ecoExports"
+                    placeholder="Enter EF Exports"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+              <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                  <input
+                    type="text"
+                    name="ecoImports"
+                    id="ecoImports"
+                    placeholder="Enter EF Imports"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div>
+            <!-- <a href="/predictEcoFootprintML" method="post" class="about-btn">About<i class="bx bx-chevron-right"></i></a> -->
+            <button href="/predictEcoFootprintML" class="formbold-btn">Predict your Footprint</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .filter-switch label {
+      cursor: pointer;
+    }
+    .filter-switch-item input:checked + label {
+      color: inherit;
+    }
+    .filter-switch-item input:not(:checked) + label {
+      --bg-opacity: 0;
+      box-shadow: none;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    .formbold-mb-5 {
+      margin-bottom: 20px;
+    }
+    .formbold-pt-3 {
+      padding-top: 12px;
+    }
+    .formbold-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+  
+    .formbold-form-wrapper {
+      margin: 0 auto;
+      max-width: 550px;
+      width: 100%;
+      background: #f9f9f9;
+    }
+    .formbold-form-label {
+      display: block;
+      font-weight: 500;
+      font-size: 16px;
+      color: #07074d;
+      margin-bottom: 12px;
+    }
+    .formbold-form-label-2 {
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .formbold-form-input {
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;
+    }
+    .formbold-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+  
+    .formbold-btn {
+      text-align: center;
+      font-size: 16px;
+      border-radius: 6px;
+      padding: 14px 32px;
+      border: none;
+      font-weight: 600;
+      background-color: rgba(104, 196, 137, 0.8);
+      color: rgb(255, 255, 255);
+      width: 100%;
+      cursor: pointer;
+    }
+    .formbold-btn:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+    .formbold--mx-3 {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+    .formbold-px-3 {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+    .w-full {
+      width: 100%;
+    }
+    .box{
+      margin:20 auto; 
+      width:600px;
+      padding:20px;
+      background:#f9f9f9;
+      /* border:2px solid #333; */
+      }
+    @media (min-width: 540px) {
+      .sm\:w-half {
+        width: 50%;
+      }
+    }
+
+    @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      /* &:checked {
+        --o: 1;
+      } */
+    }
+    & + label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+  input[type='checkbox'] {
+    &:not(.switch) {
+      border-radius: 7px;
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+  input[type='radio'] {
+    border-radius: 50%;
+    &:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, .7));
+    }
+    &:checked {
+      --s: .5;
+    }
+  }
+}
+
+
+ul {
+    margin: 12px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 320px;
+}
+
+li {margin: 16px 0; position:relative;}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #8A91B4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F6F8FF;
+  @media(max-width: 800px) {
+    flex-direction: column;
+  }
+}
+  </style>
