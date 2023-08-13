@@ -1,0 +1,7 @@
+applications:
+ - name: app.py   # Sets application name
+   memory: 3G       # Sets memory limit of the app
+   disk_quota: 3G   # Allocates disk space to the app
+   random-route: true
+   timeout: 600
+   command: python app.py

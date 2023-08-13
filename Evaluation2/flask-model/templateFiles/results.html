@@ -1,0 +1,16 @@
+<link href="../staticFiles/assets/css/results-style.css" rel="stylesheet">
+<div class="card">
+
+    <div class="imgBox">
+      <img src="../staticFiles/assets/img/results.png" alt="mouse corsair" class="mouse">
+    </div>
+  
+    <div class="contentBox">
+        {% for item in data %}
+            <h4 class="card-title">Your EF prediction is</h4> &nbsp;
+            <h3 class="price">{{item.value}}</h3> &nbsp;
+            <a href="/" class="buy">HOME</a>
+        {% endfor %}
+    </div>
+  
+  </div>

@@ -1,0 +1,7 @@
+applications:
+ - name: index.py   # Sets application name
+   memory: 8G       # Sets memory limit of the app
+   disk_quota:  4095MB   # Allocates disk space to the app
+   random-route: true
+   timeout: 600
+   command: python index.py
