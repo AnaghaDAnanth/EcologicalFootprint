@@ -7,7 +7,7 @@
   <p align="center">
     An Intelligent Modeling Approach to Global Ecological Footprint for Sustainability Analysis
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+<!--     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a> -->
   </p>
 </div>
 
