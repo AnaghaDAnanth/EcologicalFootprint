@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <h2 align="center">Ecological Footprint Analysis and Prediction</h2>
+  <h2 align="center">EcoLens – View sustainability through data</h2>
 
   <p align="center">
     An Intelligent Modeling Approach to Global Ecological Footprint for Sustainability Analysis
